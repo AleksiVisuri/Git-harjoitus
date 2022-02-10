@@ -31,3 +31,8 @@ else if (operaattorinValinta == "erotus" || operaattorinValinta == "-")
     Console.WriteLine("Lasketaan x - y...");
     Console.WriteLine(firstNumber + " - " + secondNumber + " = " + erotus);
 }
+
+int Yhteenlasku (int ekaNumero, int tokaNumero)
+{
+    return ekaNumero + tokaNumero;
+}
