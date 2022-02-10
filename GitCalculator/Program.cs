@@ -1,17 +1,33 @@
 ﻿using System;
 
-Console.WriteLine("Tervetuloa calculaattoriin!");
+Console.WriteLine("Tervetuloa calculaattoriin! Lasketaan yksinkertainen yhteenlasku ja vähennyslasku.");
 
-int firstnumber, secondnumber;
+int firstNumber, secondNumber;
 
-Console.WriteLine("Laskemme x + y, anna x:");
+Console.WriteLine("Anna x:");
 
-firstnumber = Convert.ToInt32(Console.ReadLine());
+firstNumber = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Anna y:");
 
-secondnumber = Convert.ToInt32(Console.ReadLine());
+secondNumber = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine(firstnumber + " + " + secondnumber + " = " + (firstnumber + secondnumber));
+int summa = firstNumber + secondNumber;
 
+int erotus = firstNumber - secondNumber;
 
+Console.WriteLine("Lasketaanko näiden x:n ja y:n summa vai erotus?");
+string operaattorinValinta = Console.ReadLine().ToLower();
+
+if (operaattorinValinta == "summa" || operaattorinValinta == "+")
+{
+    Console.WriteLine("Lasketaan x + y...");
+    Console.WriteLine(firstNumber + " + " + secondNumber + " = " + summa);
+
+}
+
+else if (operaattorinValinta == "erotus" || operaattorinValinta == "-")
+{
+    Console.WriteLine("Lasketaan x - y...");
+    Console.WriteLine(firstNumber + " - " + secondNumber + " = " + erotus);
+}
